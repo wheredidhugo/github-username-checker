@@ -1,6 +1,6 @@
 # github-username-checker
 
-Checks for usernames with a define number of letters (Is currently limited to only 3 characters, working on it) on GitHub
+Checks for usernames with a define number of letters on GitHub
 
 # WARNING
 
