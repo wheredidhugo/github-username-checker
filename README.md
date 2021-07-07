@@ -47,3 +47,5 @@ You can see your results in users.txt.
 ## Step 5
 
 Enjoy your new usernames!
+
+# Don't forget to :star: this repo!
