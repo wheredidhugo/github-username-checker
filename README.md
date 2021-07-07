@@ -1,6 +1,6 @@
 # github-username-checker
 
-Checks for usernames with a define number of letters on GitHub
+Checks for random usernames with a define number of letters on GitHub
 
 # WARNING
 
