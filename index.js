@@ -49,8 +49,7 @@ function fetchNames() {
     .then((res) => res.json())
     .then((json) => {
       if (json.message === undefined) {
-        console.log(RandomString + " isn't taken");
-        writeName(RandomString);
+        console.log(RandomString + " is taken");
       } else if (json.message === "Not Found") {
         console.log(RandomString + " isn't taken");
         writeName(RandomString);
@@ -59,4 +58,4 @@ function fetchNames() {
       }
     });
 }
-setInterval(fetchNames, 3000);
+setInterval(fetchNames, 1000);
