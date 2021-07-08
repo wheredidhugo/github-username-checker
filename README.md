@@ -10,7 +10,7 @@ Checks for random usernames with a define number of letters on GitHub
 
 ## Step 1
 
-Either download the zip by clicking on the green button that says "Code" and then clicking on "Download as Zip"
+Either download the zip by clicking on the green button that says "Code" and then clicking on "Download ZIP"
 
 or
 
@@ -40,7 +40,7 @@ Run the script by typing:
 
 After a small list of results, you can end the script by pressing
 
-### Control + C
+#### Control + C
 
 You can see your results in users.txt.
 

@@ -2,24 +2,6 @@ const fetch = require("node-fetch");
 const fs = require("fs");
 const prompt = require("prompt-sync")({ sigint: true });
 
-function getRandomString(length) {
-  var randomChars = "abcdefghijklmnopqrstuvwxyz0123456789";
-  var result = "";
-  for (var i = 0; i < length; i++) {
-    result += randomChars.charAt(
-      Math.floor(Math.random() * randomChars.length)
-    );
-  }
-  return result;
-}
-
-function writeName(name) {
-  fs.appendFile("users.txt", name + ", ", function (err) {
-    if (err) return console.log(err);
-    console.log(name + "> users.txt");
-  });
-}
-
 let x = 0;
 var lUsername = "";
 while (x < 999) {
@@ -43,18 +25,32 @@ while (x < 999) {
   }
 }
 
+function getRandomString(length) {
+  var randomChars = "abcdefghijklmnopqrstuvwxyz0123456789";
+  var result = "";
+  for (var i = 0; i < length; i++) {
+    result += randomChars.charAt(
+      Math.floor(Math.random() * randomChars.length)
+    );
+  }
+  return result;
+}
+
+function writeName(name) {
+  fs.appendFile("users.txt", name + ", ", function (err) {
+    if (err) return console.log(err);
+    console.log(name + "> users.txt");
+  });
+}
+
 function fetchNames() {
   var RandomString = getRandomString(lUsername);
   fetch("https://api.github.com/users/" + RandomString)
     .then((res) => res.json())
     .then((json) => {
       if (json.message === undefined) {
-        if (json.login === undefined) {
-          console.log(RandomString + " isn't taken");
-          writeName(RandomString);
-        } else {
-          console.log(RandomString + " is taken");
-        }
+        console.log(RandomString + " isn't taken");
+        writeName(RandomString);
       } else if (json.message === "Not Found") {
         console.log(RandomString + " isn't taken");
         writeName(RandomString);
