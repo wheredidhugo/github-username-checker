@@ -10,15 +10,7 @@
 
 ## Step I
 
-Either download the zip by clicking on the green button that says "Code" and then clicking on "Download ZIP"
-
-or
-
-Clone this repo by using a command line:
-
-```bash
->git clone https://github.com/bgpvp/github-username-checker
-```
+Clone the repo
 
 ## Step II
 
